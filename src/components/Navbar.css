@@ -2,9 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--space-md) var(--space-lg);
+    padding: var(--space-xl) var(--space-lg);
     background-color: var(--color-primary);
-    box-shadow: var(--shadow-sm);
 }
 
 .navbar-logo {
@@ -15,17 +14,15 @@
 }
 
 .navbar-search {
-    flex: 1;
     display: flex;
+    flex: 1;
     justify-content: center;
-    margin: 0 var(--space-lg);
 }
 
 .search-input {
-    width: 60%;
-    max-width: 400px;
+    width: 50%;
+    margin-right: 10%;
     padding: var(--space-xs) var(--space-sm);
-    border: 1px solid #e5e7eb;
     border-radius: var(--radius-md);
     font-size: 1rem;
 }

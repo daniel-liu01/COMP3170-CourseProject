@@ -4,6 +4,19 @@
     font-style: normal;
 }
 
+* {
+    font-family: var(--font);
+}
+
+/* Reset default margin/padding */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --font: "Nunito", sans-serif;
     --font-display: "Press Start 2P", system-ui;
