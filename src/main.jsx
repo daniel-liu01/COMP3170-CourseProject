@@ -7,6 +7,5 @@ import Cards from './components/cards'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <Cards />
   </StrictMode>,
 )
