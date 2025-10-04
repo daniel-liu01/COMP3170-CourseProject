@@ -1,0 +1,18 @@
+.card-selection {
+    width: 268px;
+    height: 268px;
+    background-color: #CED3DC;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+
+}
+
+.card-selection:hover {
+ transform: translateY(-6px);
+    background-color: #1F487E;
+}
+
+.bookmark {
+    margin-left: 220px;
+    margin-top: 10px;
+}
