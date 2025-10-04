@@ -1,5 +1,6 @@
 import React from "react";
 import "./GameGrid.css";
+import Cards from "./cards";
 
 export default function GameGrid() {
     return (
@@ -9,14 +10,14 @@ export default function GameGrid() {
                 <a href="#">View More →</a>
             </div>
             <div className="grid">
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
             </div>
 
             <div className="row">
@@ -24,14 +25,14 @@ export default function GameGrid() {
                 <a href="#">View More →</a>
             </div>
             <div className="grid">
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
+                <Cards />
+                <Cards />
+              <Cards />
+            <Cards />
+           <Cards />
+           <Cards />
+           <Cards />
+           <Cards />
             </div>
 
             <div className="row">
@@ -39,14 +40,14 @@ export default function GameGrid() {
                 <a href="#">View More →</a>
             </div>
             <div className="grid">
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
+                <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
+               <Cards />
+                <Cards />
+                <Cards />
+                <Cards />
             </div>
         </div>
     );
