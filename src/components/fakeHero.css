@@ -1,0 +1,36 @@
+.fakeHeroContainer {
+    position: relative;
+    width: 800px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+.leftRectangle {
+    position: absolute;
+    left: -200px;
+    top: 0;
+    width: 400px;
+    height: 300px;
+    background-color: #E0E0E0;
+    z-index: 1;
+}
+
+.centralRectangle {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 800px;
+    height: 300px;
+    background-color: #A9A9A9;
+    z-index: 2;
+}
+
+.rightRectangle {
+    position: absolute;
+    right: -200px;
+    top: 0;
+    width: 400px;
+    height: 300px;
+    background-color: #E0E0E0;
+    z-index: 1;
+}
