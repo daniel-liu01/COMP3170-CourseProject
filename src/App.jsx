@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Cards from "./components/cards";
 import GameGrid from "./components/GameGrid";
 import FakeHero from "./components/fakeHero.jsx";
 
