@@ -12,8 +12,10 @@ function App() {
             <Navbar />
             <FakeHero />
             <main>
+                <div className="Desc">
                 <h2>Helloooooo, welcome to GamesVault!</h2>
                 <p>Start exploring your favorite games!</p>
+                </div>
                 <GameGrid />
             </main>
         </div>
