@@ -1,6 +1,7 @@
 .card-selection {
     width: 268px;
     height: 268px;
+    position: relative;
     box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
 
