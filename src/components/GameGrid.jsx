@@ -1,6 +1,6 @@
 import React from "react";
 import "./GameGrid.css";
-import Cards from "./Cards.jsx";
+import Cards from "./cards.jsx";
 
 export default function GameGrid() {
     return (
