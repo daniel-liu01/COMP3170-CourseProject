@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Cards from "./Cards";
 import "./GameGrid.css";
-import styles from "./GameSection.module.css";
+import "./GameSection.css";
 
 const API_KEY = import.meta.env.VITE_RAWG_API_KEY;
 
