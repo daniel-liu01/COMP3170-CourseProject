@@ -25,19 +25,6 @@ function App() {
           <h2>Helloooooo, welcome to GamesVault!</h2>
           <p>Start exploring your favorite games!</p>
         </div>
-        <ul>
-          {games.map((game) => (
-            <li key={game.id}>
-              <img
-                src={game.background_image}
-                alt={game.name}
-                width="200"
-                style={{ borderRadius: "10px" }}
-              />
-              <p>{game.name}</p>
-            </li>
-          ))}
-        </ul>
         <GameGrid />
       </main>
     </div>
