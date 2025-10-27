@@ -1,45 +1,44 @@
 .fakeHeroContainer {
-    position: relative;
-    width: 800px;
-    height: 300px;
-    margin: 20px auto;
+  position: relative;
+  width: 800px;
+  height: 300px;
+  margin: 20px auto;
 }
 
 .leftRectangle {
-    position: absolute;
-    left: -200px;
-    top: 0;
-    width: 400px;
-    height: 300px;
-    background-color: #E0E0E0;
-    z-index: 1;
-    background-image: url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/59827b3d0abf2f29adacfe72fdfd11059d6974e2/capsule_616x353.jpg?t=1759483388');
-    background-size:cover;
-    background-position: center;
+  position: absolute;
+  left: -200px;
+  top: 0;
+  width: 400px;
+  height: 300px;
+  background-color: #e0e0e0;
+  z-index: 1;
+  background-image: url("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1086940/59827b3d0abf2f29adacfe72fdfd11059d6974e2/capsule_616x353.jpg?t=1759483388");
+  background-size: cover;
+  background-position: center;
 }
 .centralRectangle {
-    position: absolute;
-    left: 10px;
-    top: -15px; 
-    width: 800px;
-    height: 340px;
-    background-color: #A9A9A9;
-    z-index: 2;
-    background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202502/1300/01248ef12bf2841c3b97bc1af344f922e5cbbf7a8870e0f8.jpg ');
-  background-size:cover;
+  position: absolute;
+  left: 10px;
+  top: -15px;
+  width: 800px;
+  height: 340px;
+  background-color: #a9a9a9;
+  z-index: 2;
+  background-image: url("https://image.api.playstation.com/vulcan/ap/rnd/202502/1300/01248ef12bf2841c3b97bc1af344f922e5cbbf7a8870e0f8.jpg ");
+  background-size: cover;
   background-position: center;
-
 }
 
 .rightRectangle {
-    position: absolute;
-    right: -200px;
-    top: 0;
-    width: 400px;
-    height: 300px;
-    background-color: #E0E0E0;
-    z-index: 1;
-    background-image: url('https://image.api.playstation.com/vulcan/ap/rnd/202505/1521/44c15449fbe9485987e27e2fa2c86008a7b4a89d9ab7e0a8.png');
-  background-size:cover;
+  position: absolute;
+  right: -200px;
+  top: 0;
+  width: 400px;
+  height: 300px;
+  background-color: #e0e0e0;
+  z-index: 1;
+  background-image: url("https://image.api.playstation.com/vulcan/ap/rnd/202505/1521/44c15449fbe9485987e27e2fa2c86008a7b4a89d9ab7e0a8.png");
+  background-size: cover;
   background-position: center;
 }
