@@ -29,5 +29,5 @@
 .game-title {
   margin-top: 4px;
   font-size: 20px;
-  color: black;
+  color: var(--color-text-light);
 }

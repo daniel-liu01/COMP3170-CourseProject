@@ -4,8 +4,21 @@
 
 .grid {
   margin-top: 20px;
+  color: var(--color-text-light);
 }
 
 .section {
   padding-bottom: 40px;
+}
+
+.genre {
+  color: var(--color-text-light);
+}
+
+.gameInfo {
+  color: var(--color-text-light);
+}
+
+.viewMore {
+  color: var(--color-accent);
 }

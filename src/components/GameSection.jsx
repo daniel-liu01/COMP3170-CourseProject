@@ -35,7 +35,12 @@ export default function GameSection({ title, genre }) {
 
       <div className="grid">
         {games.map((game) => (
-          <Cards key={game.id} img={game.background_image} title={game.name} />
+          <Cards
+            className="gameInfo"
+            key={game.id}
+            img={game.background_image}
+            title={game.name}
+          />
         ))}
       </div>
     </div>
