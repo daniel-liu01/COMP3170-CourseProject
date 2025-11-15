@@ -32,6 +32,10 @@
   align-items: center;
 }
 
+.profile-header * {
+  user-select: none;
+}
+
 .profile-image-container {
   position: relative;
   margin-bottom: var(--space-lg);
@@ -77,6 +81,7 @@
 .profile-image-edit-icon {
   font-size: 16px;
   color: white;
+  user-select: none;
 }
 
 .profile-header h1 {
@@ -90,6 +95,7 @@
 .profile-subtitle {
   font-size: 1.1rem;
   color: #cbd5e1;
+  user-select: none;  
 }
 
 .empty-state {
@@ -100,15 +106,6 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
   z-index: 1;
-  pointer-events: none;
-}
-
-.empty-state > * {
-  pointer-events: none;
-}
-
-.empty-state .browse-button {
-  pointer-events: auto;
 }
 
 .empty-message {
@@ -117,7 +114,6 @@
   margin-bottom: var(--space-sm);
   font-weight: 500;
   user-select: none;
-  pointer-events: none;
 }
 
 .empty-hint {
@@ -125,7 +121,7 @@
   color: #cbd5e1;
   margin-bottom: var(--space-lg);
   user-select: none;
-  pointer-events: none;
+
 }
 
 .browse-button {
@@ -135,12 +131,10 @@
   border: none;
   border-radius: var(--radius-md);
   font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
+
   transition: background 0.2s ease, transform 0.1s ease;
   position: relative;
   z-index: 2;
-  pointer-events: auto;
   user-select: none;
 }
 
@@ -153,9 +147,7 @@
   transform: translateY(0);
 }
 
-.saved-games-section {
-  margin-top: var(--space-lg);
-}
+
 
 .section-title {
   font-size: 1.75rem;
@@ -163,6 +155,7 @@
   color: var(--color-text-light);
   margin-bottom: var(--space-lg);
   font-family: var(--font-display);
+  user-select: none;
 }
 
 .saved-games-grid {
@@ -202,11 +195,16 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
+.saved-game-info * {
+  user-select: none;
+}
+
 .saved-game-title {
   font-size: 1.1rem;
   font-weight: 600;
   color: #ffffff;
   margin: 0 0 var(--space-xs) 0;
+  user-select: none;
 }
 
 .saved-game-publisher {
@@ -214,6 +212,7 @@
   font-weight: 400;
   color: #cbd5e1;
   margin: 0;
+  user-select: none;
 }
 
 @media (max-width: 768px) {
