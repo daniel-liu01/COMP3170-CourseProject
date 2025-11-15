@@ -5,6 +5,8 @@
   padding: var(--space-xl) var(--space-lg);
   background-color: var(--color-primary);
   box-shadow: 0 8px 20px rgba(120, 190, 255, 0.1);
+  position: relative;
+  z-index: 10;
 }
 
 .navbar-logo {
@@ -26,6 +28,8 @@
   padding: var(--space-xs) var(--space-sm);
   border-radius: var(--radius-md);
   font-size: 1rem;
+  position: relative;
+  z-index: 11;
 }
 
 .search-input:focus {
