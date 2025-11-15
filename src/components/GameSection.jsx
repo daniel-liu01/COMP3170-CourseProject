@@ -11,11 +11,36 @@ export default function GameSection({ title, genre }) {
   useEffect(() => {
     async function fetchGamesByGenre() {
       try {
+        // 1. Fetch games list
         const response = await fetch(
-          `https://api.rawg.io/api/games?key=${API_KEY}&genres=${genre}&page_size=8`
+          `https://api.rawg.io/api/games?key=${API_KEY}&genres=${genre}&page_size=12`
         );
         const data = await response.json();
-        setGames(data.results || []);
+
+        // 2. Fetch details for each game to get publishers
+        const gamesWithPublishers = await Promise.all(
+          data.results.map(async (game) => {
+            try {
+              const detailRes = await fetch(
+                `https://api.rawg.io/api/games/${game.id}?key=${API_KEY}`
+              );
+              const detail = await detailRes.json();
+
+              return {
+                ...game,
+                publisher:
+                  detail.publishers?.map((p) => p.name).join(", ") || "Unknown",
+              };
+            } catch {
+              return {
+                ...game,
+                publisher: "Unknown",
+              };
+            }
+          })
+        );
+
+        setGames(gamesWithPublishers);
       } catch (error) {
         console.error("Failed to fetch games:", error);
       }
@@ -36,10 +61,10 @@ export default function GameSection({ title, genre }) {
       <div className="grid">
         {games.map((game) => (
           <Cards
-            className="gameInfo"
             key={game.id}
             img={game.background_image}
             title={game.name}
+            publisher={game.publisher}
           />
         ))}
       </div>
