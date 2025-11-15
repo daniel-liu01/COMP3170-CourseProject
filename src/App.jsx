@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import GameGrid from "./components/GameGrid";
-import FakeHero from "./components/fakeHero.jsx";
+import Hero from "./components/Hero.jsx";
 import { useEffect, useState } from "react";
 import { fetchGames } from "../api/rawg.js";
 
@@ -17,9 +17,9 @@ function App() {
     loadGames();
   }, []);
   return (
-    <div>
+    <div className="homepage">
       <Navbar />
-      <FakeHero />
+      <Hero />
       <main>
         <div className="Desc"></div>
         <GameGrid />
