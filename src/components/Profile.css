@@ -1,0 +1,239 @@
+.profile-wrapper {
+  min-height: 100vh;
+  background-color: #0a0e1a;
+}
+
+.profile-page {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0a0e1a;
+  background-image: url("/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.profile-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image-container {
+  position: relative;
+  margin-bottom: var(--space-lg);
+  cursor: pointer;
+  display: inline-block;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image-container:hover .profile-image {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.profile-image-overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #0a0e1a;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile-image-container:hover .profile-image-overlay {
+  opacity: 1;
+}
+
+.profile-image-edit-icon {
+  font-size: 16px;
+  color: white;
+}
+
+.profile-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-xs);
+  font-family: var(--font-display);
+}
+
+.profile-subtitle {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--space-3xl) var(--space-lg);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.empty-state > * {
+  pointer-events: none;
+}
+
+.empty-state .browse-button {
+  pointer-events: auto;
+}
+
+.empty-message {
+  font-size: 1.5rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-sm);
+  font-weight: 500;
+  user-select: none;
+  pointer-events: none;
+}
+
+.empty-hint {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: var(--space-lg);
+  user-select: none;
+  pointer-events: none;
+}
+
+.browse-button {
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.browse-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.browse-button:active {
+  transform: translateY(0);
+}
+
+.saved-games-section {
+  margin-top: var(--space-lg);
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-lg);
+  font-family: var(--font-display);
+}
+
+.saved-games-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(268px, 1fr)
+  );
+  gap: var(--space-lg);
+  padding-bottom: var(--space-xl);
+}
+
+.saved-game-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #0d0f12;
+  cursor: pointer;
+}
+
+.saved-game-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.saved-game-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.saved-game-info {
+  padding: var(--space-md);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.saved-game-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.saved-game-publisher {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .profile-header h1 {
+    font-size: 2rem;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-image-overlay {
+    width: 32px;
+    height: 32px;
+  }
+
+  .saved-games-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-md);
+  }
+}
+

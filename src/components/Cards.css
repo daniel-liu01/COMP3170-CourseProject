@@ -89,3 +89,8 @@
   transform: scale(1.15);
   opacity: 1;
 }
+
+.bookmark.saved {
+  filter: brightness(0) saturate(100%) invert(69%) sepia(98%) saturate(1352%) hue-rotate(87deg) brightness(118%) contrast(119%);
+  opacity: 1;
+}

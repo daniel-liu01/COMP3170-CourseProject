@@ -1,12 +1,14 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import GameGrid from "./components/GameGrid";
 import Hero from "./components/Hero.jsx";
+import Profile from "./components/Profile";
 import { useEffect, useState } from "react";
 import { fetchGames } from "../api/rawg.js";
 
-function App() {
+function HomePage() {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
@@ -16,6 +18,7 @@ function App() {
     }
     loadGames();
   }, []);
+
   return (
     <div className="homepage">
       <Navbar />
@@ -25,6 +28,15 @@ function App() {
         <GameGrid />
       </main>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/profile" element={<Profile />} />
+    </Routes>
   );
 }
 
