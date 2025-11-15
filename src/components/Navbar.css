@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: var(--space-xl) var(--space-lg);
   background-color: var(--color-primary);
-  box-shadow: 0 8px 20px rgba(120, 190, 255, 0.35);
+  box-shadow: 0 8px 20px rgba(120, 190, 255, 0.1);
 }
 
 .navbar-logo {

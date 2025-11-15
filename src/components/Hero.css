@@ -1,18 +1,95 @@
 .HeroContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  margin: 20px auto;
-  padding-top: 20px;
+  padding: 40px 20px;
+  background-color: #0d0f12;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: rgba(29, 52, 97, 0.45);
+  box-shadow: 0 8px 30px rgba(135, 206, 250, 0.15);
 }
 
-.centralRectangle {
-  display: relative;
-  width: 800px;
-  height: 400px;
-  background-color: #a9a9a9;
-  background-image: url("https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/store/software/switch/70010000020840/60eebc8f7133f685eddbffbe43c8da617ba0a5d699f2008f9c31c6119d1792af");
-  background-size: cover;
-  background-position: center;
+.HeroContent {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+  flex-wrap: wrap; /* responsive */
+}
+
+.HeroText {
+  flex: 1 1 400px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Apply consistent spacing between elements */
+.HeroText > * {
+  margin: 0 0 20px 0;
+}
+
+.HeroText > *:last-child {
+  margin-bottom: 0;
+}
+
+.HeroHeading {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.HeroTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.HeroDesc {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.HeroButton {
+  padding: 12px 24px;
+  background-color: #1f487e;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none; /* important for <a> */
+  display: inline-block;
+  width: fit-content;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.HeroButton:hover {
+  background-color: #3b6cd1;
+  transform: translateY(-2px);
+}
+
+.HeroImage {
+  flex: 1 1 400px;
+}
+
+.HeroImg {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .HeroContent {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .HeroText {
+    text-align: center;
+  }
 }
