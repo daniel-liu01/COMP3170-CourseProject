@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./cards.css";
-import bookmarkIcon from "../assets/bookmark.svg";
+import SaveGameButton from "./SaveGameButton";
 
 function Cards({ id, img, title, publisher }) {
   return (
@@ -19,7 +19,14 @@ function Cards({ id, img, title, publisher }) {
         </div>
       </div>
 
-      <img className="bookmark" src={bookmarkIcon} alt="bookmark" />
+      <SaveGameButton
+        game={{
+          id,
+          name: title,
+          publisher,
+          background_image: img,
+        }}
+      />
     </Link>
   );
 }
