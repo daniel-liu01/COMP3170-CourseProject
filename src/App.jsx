@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import GameGrid from "./components/GameGrid";
 import Hero from "./components/Hero.jsx";
 import Profile from "./components/Profile";
+import GameDetail from "./pages/GameDetail";
 import { useEffect, useState } from "react";
 import { fetchGames } from "../api/rawg.js";
 
@@ -36,6 +37,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/game/:gameId" element={<GameDetail />} />
     </Routes>
   );
 }
