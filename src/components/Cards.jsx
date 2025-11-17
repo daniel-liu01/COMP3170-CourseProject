@@ -1,9 +1,14 @@
+import { Link } from "react-router-dom";
 import "./cards.css";
 import bookmarkIcon from "../assets/bookmark.svg";
 
-function Cards({ img, title, publisher }) {
+function Cards({ id, img, title, publisher }) {
   return (
-    <div className="card-selection">
+    <Link
+      to={`/game/${id}`}
+      className="card-selection"
+      aria-label={`View details for ${title}`}
+    >
       <div className="img-wrapper">
         {img && <img className="cover" src={img} alt="cover" />}
         <div className="img-gradient"></div>
@@ -15,7 +20,7 @@ function Cards({ img, title, publisher }) {
       </div>
 
       <img className="bookmark" src={bookmarkIcon} alt="bookmark" />
-    </div>
+    </Link>
   );
 }
 

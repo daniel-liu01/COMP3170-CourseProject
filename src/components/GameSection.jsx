@@ -62,6 +62,7 @@ export default function GameSection({ title, genre }) {
         {games.map((game) => (
           <Cards
             key={game.id}
+            id={game.id}
             img={game.background_image}
             title={game.name}
             publisher={game.publisher}
