@@ -1,0 +1,115 @@
+.star-rating-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 246, 237, 0.2);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    margin-top: 30px;
+}
+
+.star-rating-container h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.125rem;
+    color: #f5f7fb;
+    font-weight: 600;
+}
+
+.stars {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.star {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.3);
+    transition: all 0.2s ease;
+    padding: 0;
+    line-height: 1;
+}
+
+.star:hover {
+    color: rgba(0, 246, 237, 0.6);
+    transform: scale(1.1);
+}
+
+.star.filled {
+    color: #00f6ed;
+    text-shadow: 0 0 10px rgba(0, 246, 237, 0.5);
+}
+
+.rating-display {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.rating-display p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #f5f7fb;
+}
+
+.submit-rating {
+    background: linear-gradient(135deg, #00f6ed 0%, #0099cc 100%);
+    color: #0a0e1a;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.submit-rating:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 246, 237, 0.4);
+}
+
+.submit-rating:active {
+    transform: translateY(0);
+}
+
+.rating-submitted {
+    color: #00f6ed;
+    margin: 0.75rem 0 0 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .star-rating-container {
+        padding: 1rem;
+    }
+
+    .star {
+        font-size: 2rem;
+    }
+
+    .stars {
+        gap: 0.5rem;
+    }
+}
