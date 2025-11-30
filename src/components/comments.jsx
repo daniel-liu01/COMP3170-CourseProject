@@ -6,25 +6,33 @@ export default function Comments({ gameId, gameName }) {
     const [newComment, setNewComment] = useState("");
     const [username, setUsername] = useState("");
 
-
     useEffect(() => {
-
-        if (!window.gameComments) {
-            window.gameComments = {};
-        }
+        if (!gameId) return;
         
-        if (window.gameComments[gameId]) {
-            setComments(window.gameComments[gameId]);
+        try {
+            const storageKey = `game_comments_${gameId}`;
+            const stored = localStorage.getItem(storageKey);
+            if (stored) {
+                const parsedComments = JSON.parse(stored);
+                setComments(parsedComments);
+            } else {
+                setComments([]);
+            }
+        } catch (error) {
+            console.error("Failed to load comments:", error);
+            setComments([]);
         }
     }, [gameId]);
 
-    
-    useEffect(() => {
-        if (!window.gameComments) {
-            window.gameComments = {};
+    const saveComments = (updatedComments) => {
+        try {
+            const storageKey = `game_comments_${gameId}`;
+            localStorage.setItem(storageKey, JSON.stringify(updatedComments));
+            setComments(updatedComments);
+        } catch (error) {
+            console.error("Failed to save comments:", error);
         }
-        window.gameComments[gameId] = comments;
-    }, [comments, gameId]);
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -40,12 +48,14 @@ export default function Comments({ gameId, gameName }) {
             timestamp: new Date().toISOString(),
         };
 
-        setComments([comment, ...comments]);
+        const updatedComments = [comment, ...comments];
+        saveComments(updatedComments);
         setNewComment("");
     };
 
     const handleDelete = (commentId) => {
-        setComments(comments.filter((c) => c.id !== commentId));
+        const updatedComments = comments.filter((c) => c.id !== commentId);
+        saveComments(updatedComments);
     };
 
     return (
