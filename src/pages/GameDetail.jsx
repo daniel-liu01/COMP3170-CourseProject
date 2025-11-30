@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import StarRating from "../components/StarRating";
+import Comments from "../components/comments.jsx";
 import { fetchGameDetails } from "../../api/rawg.js";
 import "./GameDetail.css";
 
@@ -182,6 +183,7 @@ export default function GameDetail() {
                                 </div>
                             )}
                         </section>
+                        <Comments gameId={gameId} gameName={game.name} />
                     </>
                 )}
             </main>
